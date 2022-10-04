@@ -1,24 +1,48 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-h1 {
-    color: aquamarine;
-}
-
-.logo {
-    width: 100px;
-    height: 100px;
-}
-
-.cabecera {
-    background-image: url("../image/crossfit-banner-1.jpg");
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-transform: uppercase;
-    text-transform: uppercase;
-}
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            h1 {
+                color: aquamarine;
+            }
+            
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .cabecera {
+                background-image: url("../image/crossfit-banner-1.jpg");
+                height: 300px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                text-transform: uppercase;
+                text-transform: uppercase;
+            }
+            
+            .navvar {
+                background: linear-gradient(to right, rgba(238, 232, 232, 0.952), rgba(114, 117, 121, 0.5));
+                position: absolute;
+                top: 0;
+                font-weight: bold;
+                font-size: large;
+            }
+            
+            .nav-item :hover {
+                background-color: rgba(53, 51, 52, 0.644);
+                color: white;
+            }
+            
+            main,
+            .contenedor {
+                background-image: url("../image/principal.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                text-transform: uppercase;
+                text-transform: uppercase;
+                text-shadow: none;
+            }
