@@ -2,3 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+h1 {
+  color: aquamarine; }
+
+.logo {
+  width: 100px;
+  height: 100px; }
+
+.cabecera {
+  background-image: url("../image/crossfit-banner-1.jpg");
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  text-transform: uppercase; }
