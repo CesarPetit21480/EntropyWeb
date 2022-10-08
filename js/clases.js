@@ -15,10 +15,27 @@ class stock {
         this.valor = valor;
     }
 }
+
+class productoComprado {
+
+    constructor(idProducto, idTalle, precioUnitario, precioTotal, cantidad) {
+        this.idProducto = idProducto;
+        this.idTalle = idTalle;
+        this.precioUnitario = precioUnitario;
+        this.precioTotal = precioTotal;
+        this.cantidad = cantidad;
+    }
+}
+
+// array
 const ProductosCrossfit = [];
 const stocksCalleras = [];
 const stocksRodilleras = [];
 const stocksSogas = [];
+const carritoDeCompras = [];
+
+
+// cargo objetos
 
 const stockCallerasXs = new stock(1, "XS", 10, 2500);
 const stocCalleraskM = new stock(2, "M", 10, 2700);
