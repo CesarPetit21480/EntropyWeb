@@ -1,0 +1,19 @@
+main,
+.contenedor {
+    background-image: url("../image/principal.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    text-transform: uppercase;
+    text-shadow: none;
+    padding-bottom: 3rem;
+}
+
+.container__li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+}
