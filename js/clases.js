@@ -1,10 +1,12 @@
 // OBJETOS Y ARRAYS
 class productoCrossfit {
 
-    constructor(idProducto, nombre, stock) {
+    constructor(idProducto, nombre, stock, imagen, descripcion) {
         this.idProducto = idProducto;
         this.nombre = nombre;
         this.stock = stock;
+        this.imagen = imagen;
+        this.descripcion = descripcion;
     }
 }
 class stock {
@@ -30,7 +32,7 @@ class productoComprado {
 // array
 const ProductosCrossfit = [];
 const stocksCalleras = [];
-const stocksRodilleras = [];
+const stocksMuñequeras = [];
 const stocksSogas = [];
 const carritoDeCompras = [];
 
@@ -42,10 +44,10 @@ const stocCalleraskM = new stock(2, "M", 10, 2700);
 const stockCallerasXL = new stock(3, "XL", 10, 2900);
 stocksCalleras.push(stockCallerasXs, stocCalleraskM, stockCallerasXL);
 
-const stockRodillerasXs = new stock(1, "XS", 10, 1600);
-const stocCRodillerasM = new stock(2, "M", 10, 1700);
-const stockRodillerasXL = new stock(3, "XL", 10, 1900);
-stocksRodilleras.push(stockRodillerasXs, stocCRodillerasM, stockRodillerasXL);
+const stockMuñequerasXs = new stock(1, "XS", 10, 1600);
+const stocCMuñequerasM = new stock(2, "M", 10, 1700);
+const stockMuñequerassXL = new stock(3, "XL", 10, 1900);
+stocksMuñequeras.push(stockMuñequerasXs, stocCMuñequerasM, stockMuñequerassXL);
 
 
 const stockSogasXs = new stock(1, "XS", 10, 2500);
@@ -54,9 +56,9 @@ const stockSogasXl = new stock(3, "XL", 10, 3200);
 stocksSogas.push(stockSogasXs, stocCSogasM, stockSogasXl);
 
 
-const calleras = new productoCrossfit(1, "calleras", stocksCalleras);
-const rodilleras = new productoCrossfit(2, "Rodilleras", stocksRodilleras);
-const sogas = new productoCrossfit(3, "Sogas", stocksSogas);
+const calleras = new productoCrossfit(1, "calleras", stocksCalleras, "../image/calleras.png", "Combo Wod: Calleras Y Muñequeras Originales");
+const muñequeras = new productoCrossfit(2, "Rodilleras", stocksMuñequeras, "../image/muñequerasNueva.png", "Muñequeras Con Anclaje Gimnasio Weightlifting Funcional Svg");
+const sogas = new productoCrossfit(3, "Sogas", stocksSogas, "../image/sogas.png", "Soga Para Saltar Acero Speed Rope Entrenamiento Gym Fitness");
 
-ProductosCrossfit.push(calleras, rodilleras, sogas);
+ProductosCrossfit.push(calleras, muñequeras, sogas);
 console.log('listaInicial', ProductosCrossfit);

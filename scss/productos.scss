@@ -16,4 +16,40 @@ main,
     flex-wrap: wrap;
     padding: 10px;
     justify-content: center;
+    text-align: center;
+}
+
+.tamanioCards {
+    width: 20rem;
+    height: auto;
+}
+
+.card:hover {
+    background-color: rgb(180, 182, 182);
+    transform: scale(105%);
+}
+
+.sizeimg {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-items: center;
+}
+
+.botones {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid 1px rgb(190, 188, 188);
+    font-weight: bold;
+    background-color: rgb(136, 133, 133);
+}
+
+.lblbotones {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    border: solid 1px black;
 }

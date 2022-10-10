@@ -185,3 +185,4 @@ while (opcion !== 6) {
     }
     opcion = menu();
 }
+alert("Gracias por su atencion....");
