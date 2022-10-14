@@ -11,13 +11,17 @@ h1 {
   height: 60px; }
 
 .logoFooter {
-  width: 200px;
-  height: 200px;
-  padding: 0; }
+  width: 100px;
+  height: 100px;
+  padding: auto;
+  margin: auto; }
 
 .nombrefooter {
   position: relative;
   top: -50px; }
+
+.footDiv {
+  padding: 0px; }
 
 .colorIconosFacebook {
   background-color: #3b5998; }
@@ -55,12 +59,10 @@ h1 {
 
 main,
 .contenedor {
-  background-image: url("../image/principal.jpg");
+  background-image: url("../image/wod-crossfit.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  text-transform: uppercase;
-  text-transform: uppercase;
   text-shadow: none;
   padding-bottom: 3rem; }
 
@@ -74,11 +76,13 @@ main,
 
 .tamanioCards {
   width: 20rem;
-  height: auto; }
+  height: auto;
+  background-color: rgba(247, 252, 252, 0.5); }
 
 .card:hover {
-  background-color: #b4b6b6;
-  transform: scale(105%); }
+  background-color: rgba(10, 10, 10, 0.5);
+  transform: scale(105%);
+  color: white; }
 
 .sizeimg {
   width: 200px;
@@ -102,7 +106,31 @@ main,
   background-color: white;
   border: solid 1px black; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+.seleccion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.checkPers {
+  margin: 50px;
+  padding: 10px; }
+
+.seleccionFecha {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 30px;
+  text-align: center; }
+
+.label {
+  color: white; }
+
+.btnAgregar {
+  padding-left: 150px;
+  padding-right: 150px;
+  margin-top: 30px;
+  background-color: black;
+  border: solid 2px white;
+  box-shadow: 10px 5px 5px #464444;
+  font-size: larger;
+  color: white; }

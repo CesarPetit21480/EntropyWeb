@@ -1,10 +1,12 @@
-@import './variables';
-@import './mixins';
-@import './mediaQuery';
-@import './general.scss';
-@import './productos.scss';
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+@import './variables';
+@import './mixins';
+@import './mediaQuery';
+@import './general.scss';
+@import './productos.scss';
+@import './index.scss';

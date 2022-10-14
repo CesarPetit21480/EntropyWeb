@@ -1,11 +1,9 @@
 main,
 .contenedor {
-    background-image: url("../image/principal.jpg");
+    background-image: url("../image/wod-crossfit.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-transform: uppercase;
-    text-transform: uppercase;
     text-shadow: none;
     padding-bottom: 3rem;
 }
@@ -22,11 +20,13 @@ main,
 .tamanioCards {
     width: 20rem;
     height: auto;
+    background-color: rgba(247, 252, 252, 0.5);
 }
 
 .card:hover {
-    background-color: rgb(180, 182, 182);
+    background-color: rgba(10, 10, 10, 0.5);
     transform: scale(105%);
+    color: white;
 }
 
 .sizeimg {

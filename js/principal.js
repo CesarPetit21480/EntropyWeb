@@ -11,3 +11,8 @@ for (producto of ProductosCrossfit) {
     </div>
   </div></li>`;
 }
+
+
+$(function() {
+    $('#datetimepicker1').datetimepicker();
+});

@@ -1,9 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 h1 {
     color: aquamarine;
 }
@@ -14,14 +8,19 @@ h1 {
 }
 
 .logoFooter {
-    width: 200px;
-    height: 200px;
-    padding: 0;
+    width: 100px;
+    height: 100px;
+    padding: auto;
+    margin: auto;
 }
 
 .nombrefooter {
     position: relative;
     top: -50px;
+}
+
+.footDiv {
+    padding: 0px;
 }
 
 .colorIconosFacebook {
