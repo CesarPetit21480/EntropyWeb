@@ -7,6 +7,11 @@
     <title>Entropy Programacion</title>
     <script src="https://kit.fontawesome.com/6e1bb179ca.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
@@ -50,41 +55,67 @@
         </div>
     </header>
     <main class="container-fluid">
-        <div class="contenedor">
-            <ul>
-                <div id="principal" class="container__li"></div>
-            </ul>
+        <div class="contenedor justify-content-center">
+            <div id="volver" class="d-flex justify-content-center"></div>
+            <div>
+                <ul id="principal" class="container__li">
+                </ul>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button id="verCarrito" class="btn  btn-dark btn-lg btnAgregar pe-4 ps-4 m-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="">
+                    Ver Carrito
+                  </button>
 
+                <button id="VaciarCarrito" class="btn  btn-dark btn-lg btnAgregar  pe-4 ps-4  m-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="canvas">
+                    Vaciar Carrito
+                  </button>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="carrito" aria-labelledby="carritoLabel">
+                <div class="offcanvas-header">
+                    <div class="d-flex flex-column">
+                        <h5 class="offcanvas-title" id="carritoLabel">Carrito de Compras</h5>
+                        <span class="precio" id="total"></span>
+                    </div>
 
-            <form>
-                <button class="botones">+</button>
-                <label class="lblbotones" for="labelr">0</label>
-                <button class="botones">-</button>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
 
-                <label for="prov">Indique Cantidad</label>
-                <select name="cantProductos" id="cProd">
-                    <option value="Caba">1 unidad</option>
-                    <option value="Caba">2 unidad</option>
-                    <option value="Caba">3 unidad</option>
-                    <option value="Caba">4 unidad</option>
-                    <option value="Caba">5 unidad</option>
-                    <option value="Caba">6 unidad</option>
-                    <option value="Caba">7 unidad</option>
-                    <option value="Caba">8 unidad</option>                    
-                </select>
-            </form>
+                <div class="offcanvas-body" id="contenedorCarrito">
+
+                </div>
+            </div>`
 
         </div>
 
+
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="modalCompra" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabelCompra"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalInfo" class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button id="btnClose" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="btnSave" type="button" class="btn btn-primary">Confirmacion Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Remove the container if you want to extend the Footer to full width. -->
     <!-- Remove the container if you want to extend the Footer to full width. -->
     <footer class="bg-dark text-center text-white ">
-        <div class="container p-p-4 pb-0 ">
+        <div class="container p-p-4 pb-0">
             <!-- Section: Social media -->
-            <section class="mb-1 pt-2 ">
+            <section class="mb-1 pt-2">
                 <!-- Facebook -->
                 <a class="btn btn-outline-light btn-floating m-1 colorIconosFacebook " href="https://www.facebook.com/AtlonCF " role="button " target="_blank "><i class="fab fa-facebook-f " style="color: #f8f9fa "></i></a>
                 <!-- Google -->
@@ -110,7 +141,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3 " crossorigin="anonymous "></script>
     <script src="../js/clases.js "></script>
-    <script src="../js/script.js "></script>
+    <!-- TOASTIFY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- <script src="../js/script.js "></script> -->
     <script src="../js/principal.js "></script>
 </body>
 

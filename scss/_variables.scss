@@ -9,6 +9,8 @@ $tipo-negrita: bold;
 $fuente-principal: 'Mulish',
 sans-serif;
 $fuente-adicional: 'helvetica';
-$tipoH1:( tamfuente: 30pt, centro: center, tipo: bold);
+$tipoH1:( tamfuente: 20pt, centro: center, tipo: bold);
 $tipoH2:( tamfuente: 25pt, centro: center, tipo: bold, padd: 5%);
 $tipoH3:( tamfuente: 2rem, tipoLetra: $fuente-adicional, tipo: bold, padd: 5%, tipoColor :$color-blanco, izquierda:left);
+$tipoH4:( tamfuente: 20px, tipoLetra: $fuente-adicional, tipo: bold, padd: 5%, tipoColor :$color-blanco, izquierda:left);
+$tipoH5:( tamfuente: 15px, tipoLetra: $fuente-adicional, tipo: bold, padd: 5%, tipoColor :$color-blanco, izquierda:left);

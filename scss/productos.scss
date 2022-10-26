@@ -5,7 +5,7 @@ main,
     background-position: center;
     background-repeat: no-repeat;
     text-shadow: none;
-    padding-bottom: 3rem;
+    object-fit: contain;
 }
 
 .container__li {
@@ -13,6 +13,7 @@ main,
     flex-direction: row;
     flex-wrap: wrap;
     padding: 10px;
+    margin-right: 50px;
     justify-content: center;
     text-align: center;
 }
@@ -21,35 +22,122 @@ main,
     width: 20rem;
     height: auto;
     background-color: rgba(247, 252, 252, 0.5);
+    margin: 20px;
 }
 
-.card:hover {
-    background-color: rgba(10, 10, 10, 0.5);
-    transform: scale(105%);
-    color: white;
+// .card:hover {
+//     background-color: rgba(10, 10, 10, 0.5);
+//     transform: scale(105%);
+//     color: white;
+// }
+.tamanioCardsGrande {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(247, 252, 252, 0.5);
+    border: solid 2px black;
+    box-shadow: 10px 5px 5px rgb(70, 68, 68);
+    position: relative;
+    top: 5px;
 }
 
 .sizeimg {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-items: center;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 30px;
+    padding-bottom: 1rem;
 }
 
 .botones {
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: map-get($tipoH1, tamfuente);
+    font-weight: map-get($tipoH1, tipo);
     border: solid 1px rgb(190, 188, 188);
     font-weight: bold;
-    background-color: rgb(136, 133, 133);
+    background-color: rgb(83, 81, 81);
+    &:hover {
+        background-color: rgb(62, 104, 243);
+        transform: scale(101%);
+    }
 }
 
 .lblbotones {
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: map-get($tipoH1, tamfuente);
+    font-weight: map-get($tipoH1, tipo);
     background-color: white;
     border: solid 1px black;
+}
+
+.cardProducto {
+    background-color: rgba(190, 185, 185, 0.5);
+    border: solid 2px white;
+    padding: 30px;
+    padding-bottom: 60px;
+}
+
+.gridCompraProductos {
+    display: grid;
+    grid-template-areas: 'cabecera' 'principal' 'radios' 'botones';
+    grid-template-columns: 100%;
+    grid-template-rows: 25%, 40%, 10, 25%;
+    position: relative;
+    top: 4rem;
+    left: 2rem;
+}
+
+.nombre {
+    grid-area: cabecera;
+}
+
+.descripcion {
+    grid-area: principal;
+    font-size: map-get($tipoH4, tamfuente);
+    font-weight: map-get($tipoH4, tipo);
+}
+
+.botonesProductos {
+    grid-area: botones;
+    padding-top: 30px;
+}
+
+.radioProductos {
+    grid-area: radios;
+    font-size: map-get($tipoH5, tamfuente);
+    border: solid 1px white;
+    padding-top: 10px;
+}
+
+.imgProductos {
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
+    margin-top: 1rem;
+}
+
+.colorBoton {
+    color: white;
+    background-color: #85bb65;
+}
+
+.colorBoton:hover {
+    background-color: green;
+    color: white;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 30px;
 }
