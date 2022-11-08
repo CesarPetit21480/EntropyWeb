@@ -137,7 +137,24 @@ main,
     margin: 0.5rem;
 }
 
+.cardCompra {
+    background-image: radial-gradient(circle, #dde4ee, #b1c2d2, #82a2b6, #518498, #0c6778);
+    font-size: map-get($tipoH5, tamfuente);
+    font-weight: map-get($tipoH1, tipo);
+}
+
 .precio {
     font-weight: bold;
     font-size: 30px;
+}
+
+.card-titulo {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+    background-image: linear-gradient(to right top, #babfc6, #919ea2, #6d7d7c, #505d55, #393d31);
+    border: solid 2px white;
+    box-shadow: 10px 5px 5px rgb(70, 68, 68);
+    font-size: larger;
+    color: white;
 }

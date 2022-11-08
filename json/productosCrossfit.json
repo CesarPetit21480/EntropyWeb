@@ -1,0 +1,156 @@
+[{
+        "idProducto": 1,
+        "nombre": "calleras",
+        "stock": [{
+                "id": 1,
+                "tipoTalle": "XS",
+                "cantidad": "10",
+                "valor": 2500
+            },
+            {
+                "id": 2,
+                "tipoTalle": "M",
+                "cantidad": "10",
+                "valor": 2700
+            },
+            {
+                "id": 3,
+                "tipoTalle": "XL",
+                "cantidad": "10",
+                "valor": 3000
+            }
+        ],
+        "imagen": "../image/calleras.png",
+        "descripcion": "Combo Wod: Calleras Y Muñequeras Originales"
+    },
+    {
+        "idProducto": 2,
+        "nombre": "muñequeras",
+        "stock": [{
+                "id": 1,
+                "tipoTalle": "XS",
+                "cantidad": "10",
+                "valor": 1500
+            },
+            {
+                "id": 2,
+                "tipoTalle": "M",
+                "cantidad": "10",
+                "valor": 1000
+            },
+            {
+                "id": 3,
+                "tipoTalle": "XL",
+                "cantidad": "10",
+                "valor": 2500
+            }
+        ],
+        "imagen": "../image/muñequerasNueva.png",
+        "descripcion": "Muñequeras Con Anclaje Gimnasio Weightlifting Funcional Svg"
+    },
+    {
+        "idProducto": 3,
+        "nombre": "sogas",
+        "stock": [{
+                "id": 1,
+                "tipoTalle": "1.00",
+                "cantidad": "10",
+                "valor": 5000
+            },
+            {
+                "id": 2,
+                "tipoTalle": "1.50",
+                "cantidad": "10",
+                "valor": 5500
+            },
+            {
+                "id": 3,
+                "tipoTalle": "2.00",
+                "cantidad": "10",
+                "valor": 7000
+            }
+        ],
+        "imagen": "../image/sogas.png",
+        "descripcion": "Soga Para Saltar Acero Speed Rope Entrenamiento Gym Fitness"
+    },
+    {
+        "idProducto": 4,
+        "nombre": "Remeras",
+        "stock": [{
+                "id": 1,
+                "tipoTalle": "XS",
+                "cantidad": "10",
+                "valor": 6000
+            },
+            {
+                "id": 2,
+                "tipoTalle": "M",
+                "cantidad": "10",
+                "valor": 7200
+            },
+            {
+                "id": 3,
+                "tipoTalle": "XL",
+                "cantidad": "10",
+                "valor": 8000
+            }
+        ],
+        "imagen": "../image/remeras.png",
+        "descripcion": "Remeras de entrenamiento secado rapido ultra liviana dread fit"
+    },
+    {
+        "idProducto": 5,
+        "nombre": "pantalones",
+        "stock": [{
+                "id": 1,
+                "tipoTalle": "XS",
+                "cantidad": "10",
+                "valor": 10000
+            },
+            {
+                "id": 2,
+                "tipoTalle": "M",
+                "cantidad": "10",
+                "valor": 10500
+            },
+            {
+                "id": 3,
+                "tipoTalle": "XL",
+                "cantidad": "10",
+                "valor": 11000
+            }
+
+
+        ],
+        "imagen": "../image/short.png",
+        "descripcion": "short deportivos para crossfit alta duracion"
+    },
+    {
+        "idProducto": 6,
+        "nombre": "calzas",
+        "stock": [{
+                "id": 1,
+                "tipoTalle": "XS",
+                "cantidad": "10",
+                "valor": 4500
+            },
+            {
+                "id": 2,
+                "tipoTalle": "M",
+                "cantidad": "10",
+                "valor": 5000
+            },
+            {
+                "id": 3,
+                "tipoTalle": "XL",
+                "cantidad": "10",
+                "valor": 5500
+            }
+
+
+        ],
+        "imagen": "../image/calzas.png",
+        "descripcion": "Calzas De Entrenamiento Devildog Crossfit Powerlifting Run"
+    }
+
+]

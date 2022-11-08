@@ -1,9 +1,25 @@
+// ES6 Modules or TypeScript
+
 let cant = 0;
-
-
-
 const principal = document.getElementById("principal");
 
+
+const url = "../json/productosCrossfit.json";
+
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(prodCrossfit => {
+            const nuevoProducto = new productoCrossfit(prodCrossfit.idProducto, prodCrossfit.nombre, prodCrossfit.stock, prodCrossfit.imagen, prodCrossfit.descripcion);
+            ProductosCrossfit.push(nuevoProducto);
+
+        });
+        mostrarProductos();
+    })
+    .catch(error => console.log(error))
+    .finally(() => {
+        console.log("Proceso Finalizado")
+    })
 
 const mostrarProductos = () => {
 
@@ -16,14 +32,14 @@ const mostrarProductos = () => {
         const div = document.createElement("li");
         div.innerHTML =
             `<div id="${id}" class="card tamanioCards">
-            <div class="d-flex justify-content-center">
-            <img src=${imagen} class="card-img-top sizeimg" alt="productos">
-            </div>   
-            <div class="card-body">
-              <h5 class="card-title">${nombre}</h5>
-              <p>${descripcion}</p>   
-            </div>
-          </div>`
+                <div class="d-flex justify-content-center">
+                <img src=${imagen} class="card-img-top sizeimg" alt="productos">
+                </div>   
+                <div class="card-body">
+                  <h5 class="card-title">${nombre}</h5>
+                  <p>${descripcion}</p>   
+                </div>
+              </div>`
             // div.onclick = () => {
             //     filtrarProducto(id);
             // }
@@ -33,22 +49,21 @@ const mostrarProductos = () => {
 
         principal.appendChild(div);
     });
+
 };
 const filtrarProducto = (p_id) => {
 
-
-
-    const volver = document.getElementById("volver");
     cant = 0;
+    const volver = document.getElementById("volver");
     volver.innerHTML = ``;
     principal.innerHTML = ``;
-    const productoSeleccionado = ProductosCrossfit.find(prod => prod.idProducto === p_id);
+    const productoSeleccionado = ProductosCrossfit.find((producto => producto.idProducto === p_id));
     const imagen = productoSeleccionado.imagen;
     const id = productoSeleccionado.idProducto;
     const nombre = productoSeleccionado.nombre;
     const descripcion = productoSeleccionado.descripcion;
-
     const btn = document.createElement("button");
+
     btn.className = "btn btn-primary btn-lg d-flex justify-content-center btnAgregar";
     btn.id = "btnVolver";
     btn.innerText = "VOLVER A PRODUCTOS";
@@ -95,98 +110,59 @@ const filtrarProducto = (p_id) => {
 </div>`
     principal.appendChild(li);
 
-
     const btnVolver = document.getElementById("btnVolver");
     btnVolver.addEventListener("click", () => {
         principal.innerHTML = ``;
         mostrarProductos();
     })
-
     const btnComprar = document.getElementById("btnComprar");
+    btnComprar.disabled = true;
 
-    btnComprar.addEventListener("click", () => {
+    btnComprar.onclick = () => {
 
         const xschecked = document.getElementById("rXs").checked;
         const mcchecked = document.getElementById("Rm").checked;
-        let precioTotalProd = 0
-        let idTalle = 0;
-        idTalle = xschecked ? 1 : mcchecked ? 2 : 3;
-        const modalCompra = document.getElementById("modalCompra");
+        const idTalle = xschecked ? 1 : mcchecked ? 2 : 3;
         const modal = document.getElementById("modalInfo");
-        const div = document.createElement('div');
-        const modalLabel = document.getElementById("modalLabelCompra");
         const btnSave = document.getElementById("btnSave");
-        const btnClose = document.getElementById("btnClose");
-        modal.innerHTML = ``;
-        modalLabel.innerHTML = ``;
-
-        if (cant === 0) {
-            btnSave.style.visibility = "hidden";
-            modalLabel.innerText = "VALIDAR CANTIDAD";
-            div.innerHTML = `<div class="card">
-        <h5 class="card-header">COMPRA PRODUCTO</h5>
-        <div class="card-body">
-          <h5 class="card-title">${productoSeleccionado.nombre}</h5>
-          <p class="card-text">LA CANTIDAD NO ES CORRECTA</p>          
-        </div>
-      </div>`
-            modal.appendChild(div);
-            return;
-        }
-
+        const div = document.createElement('div');
         const precioProducto = productoSeleccionado.stock[idTalle - 1].valor;
         const nombreTalle = productoSeleccionado.stock[idTalle - 1].tipoTalle;
-        precioTotalProd = precioProducto * cant;
+        const precioTotalProd = precioProducto * cant;
         const prodComprado = new productoComprado(id, idTalle, precioProducto, precioTotalProd, cant);
-        btnSave.style.visibility = "visible";
-        modalLabel.innerText = "SU COMPRA";
-        div.innerHTML = `<div class="card">
-        <h5 class="card-header">COMPRA PRODUCTO</h5>
-        <div class="card-body">
-            <h5 class="card-title">${productoSeleccionado.nombre}</h5>
-            <p class="card-text">LA CANTIDAD : ${cant}</p>
-            <p class="card-text"> PRECIO UNITARIO : ${precioProducto}</p>
-            <p class="card-text"> PRECIO TOTAL : ${precioTotalProd}</p>
-            <p class="card-text"> TALLE : ${nombreTalle}</p>
-
-        </div>
-                     </div>`
+        modal.innerHTML = ``;
+        div.innerHTML = `
+        <div class="card cardCompra">
+            <div class="card-titulo">${productoSeleccionado.nombre}</div>
+            <div class="card-body">
+                <p class="card-text">LA CANTIDAD : ${cant}</p>
+                <p class="card-text"> PRECIO UNITARIO : ${precioProducto}</p>
+                <p class="card-text"> PRECIO TOTAL : ${precioTotalProd}</p>
+                <p class="card-text"> TALLE : ${nombreTalle}</p>
+            </div>
+        </div>`
         modal.appendChild(div);
 
         btnSave.onclick = () => {
-            const productoCarrito = carritoDeCompras.find(producto => producto.idProducto === prodComprado.idProducto && producto.idTalle === prodComprado.idTalle);
-            if (productoCarrito) {
-                console.log("entro");
-                productoCarrito.cantidad += cant;
-                productoCarrito.precioTotal = productoCarrito.precioUnitario * productoCarrito.cantidad;
-            } else {
-                carritoDeCompras.push(prodComprado);
-            }
-            localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
-
+            buscoEnCarrito(prodComprado);
             Toastify({
                 text: "Producto agregado al carrito Correctamente",
                 duration: 3000,
                 gravity: "top",
                 position: "right",
-
                 style: {
                     background: " linear-gradient(to right, #434343 0%, black 100%)",
                 }
-                //className: "tuNOmbredeClase",
             }).showToast();
             document.getElementById("btnClose").click();
             document.getElementById("btnVolver").click();
         }
-
-    })
-
-
-
+    }
     const btnMas = document.getElementById("btnMas");
 
     btnMas.addEventListener("click", () => {
         const cantProd = document.getElementById("cantProd");
+        btnComprar.disabled = false;
         cant = cant + 1;
         cantProd.innerText = cant;
     })
@@ -195,10 +171,23 @@ const filtrarProducto = (p_id) => {
     btnMenos.addEventListener("click", () => {
         const cantProd = document.getElementById("cantProd");
         cant = cant - 1;
-        if (cant < 0)
+        if (cant <= 0) {
             cant = 0;
+            btnComprar.disabled = true;
+        }
         cantProd.innerText = cant;
     })
+};
+const buscoEnCarrito = (prodComprado) => {
+
+    const productoCarrito = carritoDeCompras.find(producto => producto.idProducto === prodComprado.idProducto && producto.idTalle === prodComprado.idTalle);
+    if (productoCarrito) {
+        productoCarrito.cantidad += cant;
+        productoCarrito.precioTotal = productoCarrito.precioUnitario * productoCarrito.cantidad;
+    } else {
+        carritoDeCompras.push(prodComprado);
+    }
+    localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
 }
 
 const contenedorCarrito = document.getElementById("contenedorCarrito");
@@ -208,6 +197,16 @@ const vaciarCarrito = document.getElementById("VaciarCarrito");
 
 vaciarCarrito.addEventListener("click", () => {
     eliminarTodoElcarrito();
+    Toastify({
+        text: "Carrito Vaciado carrito Correctamente",
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+
+        style: {
+            background: " linear-gradient(to right, #434343 0%, black 100%)",
+        }
+    }).showToast();
 });
 
 const eliminarTodoElcarrito = () => {
@@ -224,7 +223,6 @@ verCarrito.addEventListener("click", () => {
 
 const mostrarCarrito = () => {
 
-    console.log("Carrito de Compras", carritoDeCompras);
     contenedorCarrito.innerHTML = ``
     carritoDeCompras.forEach((producto) => {
         const id = producto.idProducto;
@@ -250,15 +248,9 @@ const mostrarCarrito = () => {
         contenedorCarrito.appendChild(card);
         const botonEliminar = document.getElementById(`eliminar${id}${idTalle}`);
 
-
-
         botonEliminar.addEventListener("click", () => {
-            console.log("id", id);
-            console.log("talle", idTalle);
-
             eliminarProducto(id, idTalle);
         });
-
         calcularTotal();
     });
 }
@@ -287,5 +279,3 @@ const eliminarProducto = (id, idTalle) => {
     localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
 
 }
-
-mostrarProductos();
