@@ -2,6 +2,13 @@
 
 let cant = 0;
 const principal = document.getElementById("principal");
+const volver = document.getElementById("volver");
+const btn = document.createElement("button");
+btn.className = "btn btn-primary btn-lg d-flex justify-content-center btnAgregar";
+btn.id = "btnVolver";
+btn.innerText = "VOLVER A PRODUCTOS";
+volver.appendChild(btn);
+
 
 
 const url = "../json/productosCrossfit.json";
@@ -22,6 +29,8 @@ fetch(url)
     })
 
 const mostrarProductos = () => {
+
+    volver.style.visibility = 'hidden';
 
     ProductosCrossfit.forEach((producto) => {
 
@@ -54,20 +63,13 @@ const mostrarProductos = () => {
 const filtrarProducto = (p_id) => {
 
     cant = 0;
-    const volver = document.getElementById("volver");
-    volver.innerHTML = ``;
     principal.innerHTML = ``;
     const productoSeleccionado = ProductosCrossfit.find((producto => producto.idProducto === p_id));
     const imagen = productoSeleccionado.imagen;
     const id = productoSeleccionado.idProducto;
     const nombre = productoSeleccionado.nombre;
     const descripcion = productoSeleccionado.descripcion;
-    const btn = document.createElement("button");
-
-    btn.className = "btn btn-primary btn-lg d-flex justify-content-center btnAgregar";
-    btn.id = "btnVolver";
-    btn.innerText = "VOLVER A PRODUCTOS";
-    volver.appendChild(btn);
+    volver.style.visibility = 'visible';
 
     const li = document.createElement("li");
     li.innerHTML = `

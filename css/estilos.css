@@ -193,14 +193,16 @@ main,
   font-size: 30px; }
 
 .card-titulo {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 80px;
+  padding-right: 80px;
   margin-top: 30px;
   background-image: linear-gradient(to right top, #babfc6, #919ea2, #6d7d7c, #505d55, #393d31);
   border: solid 2px white;
   box-shadow: 10px 5px 5px #464444;
   font-size: larger;
-  color: white; }
+  color: white;
+  font-size: 20pt;
+  font-weight: bold; }
 
 .seleccion {
   display: flex;
