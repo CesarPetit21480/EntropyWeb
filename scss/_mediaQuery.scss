@@ -1,0 +1,33 @@
+        /*vista mobile */
+        
+        @media only screen and (min-width: 0px) and (max-width: 767px) {
+            .btnAgregar {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            .seleccion {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .checkPers {
+                margin: 5px;
+                background-color: rgb(12, 12, 12);
+            }
+            .tipoTiempo {
+                display: flex;
+                flex-direction: column;
+                align-content: space-around;
+            }
+            // .form-control {
+            //     padding: .375rem 2.25rem .375rem .75rem;
+            // }
+        }
+        /*vista tablet */
+        
+        @media only screen and (min-width: 767px) and (max-width: 1024px) {
+            .btnAgregar {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+        }

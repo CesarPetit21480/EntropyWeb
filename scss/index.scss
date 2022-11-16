@@ -5,8 +5,9 @@
 }
 
 .checkPers {
-    margin: 50px;
+    margin: 10px;
     padding: 10px;
+    background-color: black;
 }
 
 .seleccionFecha {
@@ -19,4 +20,9 @@
 
 .label {
     color: white;
+}
+
+.tipoTiempo {
+    display: flex;
+    flex-wrap: wrap;
 }

@@ -1,0 +1,71 @@
+[
+
+    {
+        "id": 1,
+        "nombre": "Air Squat"
+    },
+
+    {
+        "id": 2,
+        "nombre": "Back Squat "
+    },
+
+    {
+        "id": 3,
+        "nombre": "Ball Slams"
+    },
+
+    {
+        "id": 4,
+        "nombre": "Barbell Snatch"
+    },
+    {
+        "id": 5,
+        "nombre": "Bar Muscle-up"
+    },
+    {
+        "id": 6,
+        "nombre": "Box Jump"
+    },
+    {
+        "id": 7,
+        "nombre": "Burpee"
+    },
+    {
+        "id": 8,
+        "nombre": "Clean & Jerk"
+    },
+    {
+        "id": 9,
+        "nombre": "Clean"
+    },
+
+    {
+        "id": 10,
+        "nombre": "Double Unders"
+    },
+    {
+        "id": 11,
+        "nombre": "Dip"
+    },
+    {
+        "id": 12,
+        "nombre": "Dumbell Snatch"
+    },
+    {
+        "id": 13,
+        "nombre": "Dumbell Split Lifts"
+    },
+    {
+        "id": 14,
+        "nombre": "Kipping Pull-up"
+    },
+    {
+        "id": 15,
+        "nombre": "Front Squat"
+    },
+    {
+        "id": 16,
+        "nombre": "Glute-Ham Sit-up"
+    }
+]

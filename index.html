@@ -52,25 +52,24 @@
         <div class="contenedor">
             <form>
                 <div class="row seleccionFecha">
-
                     <div class="col-4"></div>
                     <div class="col-4 d-flex flex-column">
-                        <input type="date">
+                        <input class="form-control" type="date" id="fechaProgramacion" Required>
                         <label class="text-white" for="fecha">Fecha Programación</label>
                     </div>
                     <div class="col-4"></div>
-
                 </div>
 
+
                 <div class="seleccion" id="selectorCat">
-                    <input type="checkbox" class="btn-check checkPers" id="beginner" autocomplete="off">
-                    <label class="btn btn-success btn-lg checkPers" for="beginner">Begginer</label><br>
-                    <input type="checkbox" class="btn-check checkPers" id="scaled" autocomplete="off">
-                    <label class="btn btn-success btn-lg checkPers" for="scaled">Scaled</label><br>
-                    <input type="checkbox" class="btn-check checkPers" id="advanced" autocomplete="off">
-                    <label class="btn btn-success btn-lg checkPers" for="advanced">Advanced</label><br>
-                    <input type="checkbox" class="btn-check checkPers" id="todas" autocomplete="off">
-                    <label class="btn btn-success btn-lg checkPers" for="todas">Todas Las Categorías</label><br>
+                    <input type="checkbox" class="btn-check" id="beginner" value="beginner" autocomplete="off">
+                    <label class="btn btn-success checkPers" for="beginner">Begginer</label><br>
+                    <input type="checkbox" class="btn-check" id="scaled" value="scaled" autocomplete="off">
+                    <label class="btn btn-success  checkPers" for="scaled">Scaled</label><br>
+                    <input type="checkbox" class=" btn btn-check" id="advanced" value="advanced" autocomplete="off">
+                    <label class="btn btn-success checkPers" for="advanced">Advanced</label><br>
+                    <!-- <input type="checkbox" class="btn-check checkPers" id="todas" autocomplete="off">
+                    <label class="btn btn-success btn-lg checkPers" for="todas">Todas Las Categorías</label><br> -->
                     <!-- <input class="col-form-label" type="date">
                 <button class="btn btn-primary mb-3 me-3 flex-fill container__input " type="submit" name="Alta">Cargar Programacion</button> -->
                 </div>
@@ -79,66 +78,48 @@
                     <div class="col-3"></div>
                     <div class="col-6 d-flex flex-column">
                         <div>
-                            <div>
+                            <div id="tipoEjercicio">
                                 <label class="label" for="tipoEstrutucuras">indique tipo</label>
-                                <select class="form-select" aria-label="Default select" name="tipo" id="tipoEjercicio">
-                        <option value="mobility">Mobility</option>
-                        <option value="core">core</option>
-                        <option value="wod">wod</option>
-                        <option value="estructura">estrucutura</option>
-                        <option value="oly">oly</option>
-                        <option value="warmUp">warmup</option>
-                    </select>
+                                <select class="form-select" aria-label="Default select" name="tipo" id="selectTipo"></select>
                             </div>
-
                             <div>
                                 <label class="label" for="tipoEjercicios">tipo Ejercicio</label>
-                                <select class="form-select" aria-label="Default select" name="ejericio" id="tipoEjercicio">
-                        <option value="Amrap">Amrap</option>
-                        <option value="Emon">Emon</option>
-                        <option value="For Time"> For Time</option>
-                        <option value="Tabatta">Tabatta</option>                        
-                    </select>
+                                <select class="form-select" aria-label="Default select" name="ejercicio" id="selectBloque"></select>
                             </div>
 
-
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex justify-content-between tipoTiempo">
                                 <div>
-                                    <label class="label" for="tiempo" id="tiempo">tiempo Ejecucion</label>
-                                    <input type="text" class="form-control " placeholder="Tiempo">
+                                    <label class="label" for="tiempo">tiempo</label>
+                                    <input type="text" class="form-control cajasTiempo" id="tiempo" placeholder="Tiempo" required="">
                                 </div>
                                 <div>
-                                    <label class="label" for="repeticiones" id="repeticiones">Repeticiones</label>
-                                    <input type="text" class="form-control" placeholder="Repeticiones">
+                                    <label class="label" for="repeticiones">Repeticiones</label>
+                                    <input type="text" class="form-control cajasTiempo" id="repeticiones" placeholder="Repeticiones" required="">
                                 </div>
 
                                 <div>
-                                    <label class="label" for="series" id="series">Series</label>
-                                    <input type="text" class="form-control" placeholder="Nro series">
+                                    <label class="label" for="series">Series</label>
+                                    <input type="text" class="form-control cajasTiempo" id="series" placeholder="Nro series" required="">
                                 </div>
                             </div>
 
                             <div>
                                 <label class="label" for="tipoEjercicios">Ejercicios Bloque</label>
-                                <select class="form-select" aria-label="Default select" name="ejericio" id="tipoEjercicio">
-                        <option value="pullups">pull Up</option>
-                        <option value="c2b">c2b</option>
-                        <option value="du"> du</option>
-                        <option value="burppes">burppes</option>
-                        <option value="c&j">oly</option>
-                        <option value="squatClean">squat clean</option>
-                    </select>
+                                <select class="form-select" aria-label="Default select" name="ejercicio" id="selectEjercicio"></select>
                             </div>
 
                         </div>
                         <div class="d-flex justify-content-center ">
+
                             <button class="btn btn-outline-dark btnAgregar" id="btnAgregar" type="button">Agregar</button>
                         </div>
                     </div>
                     <div class="col-3"></div>
                 </div>
-
             </form>
+            <div id="contenedorProgramacion" class="row row-cols-1 row-cols-md-3 row-cols-sm-1 g-4 pt-3 pb-3">
+
+            </div>
 
     </main>
 
@@ -168,7 +149,8 @@
     </footer>
 
 
-    <script src="./js/clases.js"></script>
+    <script src="./js/entidades/programacion.js"></script>
+    <script src="./js/carga.js"></script>
     <!-- <script src="./js/script.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

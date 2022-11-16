@@ -1,0 +1,26 @@
+[{
+        "id": 1,
+        "nombre": "Mobility"
+    },
+    {
+        "id": 2,
+        "nombre": "Core"
+    },
+    {
+        "id": 3,
+        "nombre": "Wod"
+    },
+    {
+        "id": 4,
+        "nombre": "Estructura"
+    },
+    {
+        "id": 5,
+        "nombre": "Oly"
+    },
+    {
+        "id": 6,
+        "nombre": "Warmup"
+    }
+
+]

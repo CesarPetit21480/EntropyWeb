@@ -1,41 +1,50 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 h1 {
-  color: aquamarine; }
+  color: aquamarine;
+}
 
 .logo {
   width: 60px;
-  height: 60px; }
+  height: 60px;
+}
 
 .logoFooter {
   width: 100px;
   height: 100px;
   padding: auto;
-  margin: auto; }
+  margin: auto;
+}
 
 .nombrefooter {
   position: relative;
-  top: -50px; }
+  top: -50px;
+}
 
 .footDiv {
-  padding: 0px; }
+  padding: 0px;
+}
 
 .colorIconosFacebook {
-  background-color: #3b5998; }
+  background-color: #3b5998;
+}
 
 .instagramNu {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
 
 .fa-google {
   background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  -webkit-text-fill-color: transparent; }
+  -webkit-text-fill-color: transparent;
+}
 
 .cabecera {
   background-image: url("../image/crossfit-banner-1.jpg");
@@ -44,18 +53,21 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   text-transform: uppercase;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .navvar {
   background: linear-gradient(to right, rgba(238, 232, 232, 0.952), rgba(114, 117, 121, 0.5));
   position: absolute;
   top: 0;
   font-weight: bold;
-  font-size: large; }
+  font-size: large;
+}
 
 .nav-item :hover {
   background-color: rgba(53, 51, 52, 0.644);
-  color: white; }
+  color: white;
+}
 
 .btnAgregar {
   padding-left: 150px;
@@ -63,9 +75,10 @@ h1 {
   margin-top: 30px;
   background-color: black;
   border: solid 2px white;
-  box-shadow: 10px 5px 5px #464444;
+  box-shadow: 10px 5px 5px rgb(70, 68, 68);
   font-size: larger;
-  color: white; }
+  color: white;
+}
 
 main,
 .contenedor {
@@ -74,7 +87,8 @@ main,
   background-position: center;
   background-repeat: no-repeat;
   text-shadow: none;
-  object-fit: contain; }
+  object-fit: contain;
+}
 
 .container__li {
   display: flex;
@@ -83,29 +97,33 @@ main,
   padding: 10px;
   margin-right: 50px;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+}
 
 .tamanioCards {
   width: 20rem;
   height: auto;
   background-color: rgba(247, 252, 252, 0.5);
-  margin: 20px; }
+  margin: 20px;
+}
 
 .tamanioCardsGrande {
   width: 400px;
   height: 400px;
   background-color: rgba(247, 252, 252, 0.5);
   border: solid 2px black;
-  box-shadow: 10px 5px 5px #464444;
+  box-shadow: 10px 5px 5px rgb(70, 68, 68);
   position: relative;
-  top: 5px; }
+  top: 5px;
+}
 
 .sizeimg {
   width: 300px;
   height: 300px;
   position: relative;
   top: 30px;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+}
 
 .botones {
   padding-left: 20px;
@@ -114,12 +132,14 @@ main,
   padding-bottom: 5px;
   font-size: 20pt;
   font-weight: bold;
-  border: solid 1px #bebcbc;
+  border: solid 1px rgb(190, 188, 188);
   font-weight: bold;
-  background-color: #535151; }
-  .botones:hover {
-    background-color: #3e68f3;
-    transform: scale(101%); }
+  background-color: rgb(83, 81, 81);
+}
+.botones:hover {
+  background-color: rgb(62, 104, 243);
+  transform: scale(101%);
+}
 
 .lblbotones {
   padding-left: 15px;
@@ -129,68 +149,81 @@ main,
   font-size: 20pt;
   font-weight: bold;
   background-color: white;
-  border: solid 1px black; }
+  border: solid 1px black;
+}
 
 .cardProducto {
   background-color: rgba(190, 185, 185, 0.5);
   border: solid 2px white;
   padding: 30px;
-  padding-bottom: 60px; }
+  padding-bottom: 60px;
+}
 
 .gridCompraProductos {
   display: grid;
-  grid-template-areas: 'cabecera' 'principal' 'radios' 'botones';
+  grid-template-areas: "cabecera" "principal" "radios" "botones";
   grid-template-columns: 100%;
   grid-template-rows: 25%, 40%, 10, 25%;
   position: relative;
   top: 4rem;
-  left: 2rem; }
+  left: 2rem;
+}
 
 .nombre {
-  grid-area: cabecera; }
+  grid-area: cabecera;
+}
 
 .descripcion {
   grid-area: principal;
   font-size: 20px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .botonesProductos {
   grid-area: botones;
-  padding-top: 30px; }
+  padding-top: 30px;
+}
 
 .radioProductos {
   grid-area: radios;
   font-size: 15px;
   border: solid 1px white;
-  padding-top: 10px; }
+  padding-top: 10px;
+}
 
 .imgProductos {
   width: 150px;
   height: 200px;
   object-fit: contain;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+}
 
 .colorBoton {
   color: white;
-  background-color: #85bb65; }
+  background-color: #85bb65;
+}
 
 .colorBoton:hover {
   background-color: green;
-  color: white; }
+  color: white;
+}
 
 .card {
   display: flex;
   align-items: center;
-  margin: 0.5rem; }
+  margin: 0.5rem;
+}
 
 .cardCompra {
   background-image: radial-gradient(circle, #dde4ee, #b1c2d2, #82a2b6, #518498, #0c6778);
   font-size: 15px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .precio {
   font-weight: bold;
-  font-size: 30px; }
+  font-size: 30px;
+}
 
 .card-titulo {
   padding-left: 80px;
@@ -198,27 +231,69 @@ main,
   margin-top: 30px;
   background-image: linear-gradient(to right top, #babfc6, #919ea2, #6d7d7c, #505d55, #393d31);
   border: solid 2px white;
-  box-shadow: 10px 5px 5px #464444;
+  box-shadow: 10px 5px 5px rgb(70, 68, 68);
   font-size: larger;
   color: white;
   font-size: 20pt;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .seleccion {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .checkPers {
-  margin: 50px;
-  padding: 10px; }
+  margin: 10px;
+  padding: 10px;
+  background-color: black;
+}
 
 .seleccionFecha {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-top: 30px;
-  text-align: center; }
+  text-align: center;
+}
 
 .label {
-  color: white; }
+  color: white;
+}
+
+.tipoTiempo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*vista mobile */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .btnAgregar {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .seleccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .checkPers {
+    margin: 5px;
+    background-color: rgb(12, 12, 12);
+  }
+  .tipoTiempo {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+  }
+}
+/*vista tablet */
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  .btnAgregar {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
